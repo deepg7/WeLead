@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./landing.css"/> 
+		<link rel="icon" href="./logo.png"/>
+		<title>weLead</title>
+	</head>
+	<body>
+		
+		<div class="header">
+			<div class="header-logo">
+				<div class="header-logo-img center">
+					<img src="./logo.png" />
+				</div>
+				<div class="header-logo-text center notranslate">
+					<h2>weLead</h2>
+				</div>
+			</div>
+			<div class="header-list-options">
+				<ul class="center">
+					<li>Home</li>
+					<li>Disclaimer</li>
+					<li>Team</li>
+				</ul>
+			</div>
+			<div class="header-button">
+				<button class="add-help-button">Add Help</button>
+			</div>
+		</div>
+		<div class="carousel center">
+			<div class="carousel-demo"></div>
+		</div>
+		<div class="search center">
+			<h1>
+				Search By <span class="highlight">CITY</span> or
+				<span class="highlight">PINCODE</span>
+			</h1>
+		</div>
+		<div class="inputs center">
+			<div class="city-input">
+				<div class="city-input-text">Choose Your City:</div>
+				<div class="city-input-form">
+					<input type="text" placeholder="City" id="city" />
+				</div>
+			</div>
+			<div class="pincode-input">
+				<div class="pincode-input-text">Enter Your pincode:</div>
+				<div class="pincode-input-form">
+					<input type="text" placeholder="Pincode" id="pincode" />
+				</div>
+			</div>
+		</div>
+		<div class="city-pincode-search center">
+			<button class="style-button" onclick="getValue()">Search</button>
+		</div>
+		<div class="language center">
+			<div>
+				<div class="language-text">Choose Your Language:</div>
+				<div class="language-input">
+					<div id="google_translate_element"></div>
+				</div>
+			</div>
+		</div>
+		<div class="cards">
+			<div class="cards-design" onclick="beds()">
+				<div class="bed-img center">
+					<img src="../images/Bed.png" />
+				</div>
+				<div class="bed-text center">Beds</div>
+			</div>
+			<div class="cards-design" onclick="oxygen()">
+				<div class="bed-img center">
+					<img src="../images/Oxygen.png" />
+				</div>
+				<div class="bed-text center">Oxygen</div>
+			</div>
+			<div class="cards-design">
+				<div class="bed-img center">
+					<img src="../images/Plasma.png" />
+				</div>
+				<div class="bed-text center">Plasma</div>
+			</div>
+			<div class="cards-design" onclick="medicines()">
+				<div class="bed-img center">
+					<img src="../images/Medicines.png" />
+				</div>
+				<div class="bed-text center">Medicines</div>
+			</div>
+			<div class="cards-design" onclick="food()">
+				<div class="bed-img center">
+					<img src="../images/Food.png" />
+				</div>
+				<div class="bed-text center">Food</div>
+			</div>
+			<div class="cards-design" onclick="doctor()">
+				<div class="bed-img center">
+					<img src="../images/Doctor.png" />
+				</div>
+				<div class="bed-text center">Doctor</div>
+			</div>
+		</div>
+		<div class="popup-form hide" id="popup">
+			<div class="form">
+				<div class="close" id="close">
+					<button onclick="closePopup()" class="close-button">X</button>
+				</div>
+				<form>
+					<div class="name">
+						<div class="name-text center">Name:</div>
+						<div class="name-input center">
+							<input type="text" placeholder="Your Name" class="input" />
+						</div>
+					</div>
+					<div class="email">
+						<div class="email-text center">Email:</div>
+						<div class="email-input center">
+							<input type="text" placeholder="Email" class="input" />
+						</div>
+					</div>
+					<div class="contact">
+						<div class="contact-text center">Contact:</div>
+						<div class="contact-input center">
+							<input type="number" placeholder="+91" class="input" />
+						</div>
+					</div>
+					<div class="reason">
+						<div class="reason-text center">Reason:</div>
+						<div class="center">
+							<div class="reason-input center">
+								<input
+									type="text"
+									class="reason input"
+									placeholder="Reason for reporting the organization"
+								/>
+							</div>
+						</div>
+						<div class="submit-button center">
+							<button class="style-button">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="center">
+			<div class="table center">
+				<table id="beds-table" class="center">
+					<tr>
+						<th id="organization">Organization</th>
+						<th>Locality</th>
+						<th>Contact</th>
+						<th>Covid Meds</th>
+						<th>Nurse Availabilty</th>
+						<th>Number</th>
+						<th>Report</th>
+					</tr>
+					<tr>
+						<td class="blue">Give India</td>
+						<td>Open Lane</td>
+						<td>9999999999</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<div class="number">
+								<div class="number-img">
+									<img src="../images/Ellipse.png" />
+								</div>
+								<div class="number-text">3</div>
+							</div>
+						</td>
+						<td>
+							<button class="report" onclick="showPopup()">Report</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="blue">Give India</td>
+						<td>Open Lane</td>
+						<td>9999999999</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<div class="number">
+								<div class="number-img">
+									<img src="../images/Ellipse.png" />
+								</div>
+								<div class="number-text">3</div>
+							</div>
+						</td>
+						<td>
+							<button class="report">Report</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="blue">Give India</td>
+						<td>Open Lane</td>
+						<td>9999999999</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<div class="number">
+								<div class="number-img">
+									<img src="../images/Ellipse.png" />
+								</div>
+								<div class="number-text">3</div>
+							</div>
+						</td>
+						<td>
+							<button class="report">Report</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="blue">Give India</td>
+						<td>Open Lane</td>
+						<td>9999999999</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<div class="number">
+								<div class="number-img">
+									<img src="../images/Ellipse.png" />
+								</div>
+								<div class="number-text">3</div>
+							</div>
+						</td>
+						<td>
+							<button id="report" class="report">Report</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="blue">Give India</td>
+						<td>Open Lane</td>
+						<td>9999999999</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<div class="number">
+								<div class="number-img">
+									<img src="../images/Ellipse.png" />
+								</div>
+								<div class="number-text">3</div>
+							</div>
+						</td>
+						<td>
+							<button class="report">Report</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="blue">Give India</td>
+						<td>Open Lane</td>
+						<td>9999999999</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<div class="number">
+								<div class="number-img">
+									<img src="../images/Ellipse.png" />
+								</div>
+								<div class="number-text">3</div>
+							</div>
+						</td>
+						<td>
+							<button class="report" onclick="run()">Report</button>
+						</td>
+					</tr>
+				</table>
+				<table id="oxygen-table" class="center hide">
+					<tr>
+						<th>Organization</th>
+						<th>Locality</th>
+						<th>Contact</th>
+						<th>Type</th>
+						<th>Price</th>
+						<th>Number</th>
+						<th>Report</th>
+					</tr>
+				</table>
+				<table id="medicines-table" class="center hide">
+					<tr>
+						<th>Organization</th>
+						<th>Locality</th>
+						<th>Contact</th>
+						<th>Type</th>
+						<th>Number</th>
+						<th>Report</th>
+					</tr>
+				</table>
+				<table id="food-table" class="center hide">
+					<tr>
+						<th>Organization</th>
+						<th>Locality</th>
+						<th>Contact</th>
+						<th>Number</th>
+					</tr>
+				</table>
+				<div class="register-form center hide" id="doctor">
+					<form class="form" id="doctor-form">
+						<div><h1 class="center">Register</h1></div>
+						<div class="organization">
+							<div class="oraganization-text">
+								<label>Name</label>
+							</div>
+							<div class="oraganization-input">
+								<input
+									type="text"
+									class="register-input"
+									placeholder="Name"
+									id="doctor-name"
+								/>
+							</div>
+						</div>
+						<div class="email">
+							<div class="email-text">
+								<label>Email</label>
+							</div>
+							<div class="email-input">
+								<input
+									type="text"
+									class="register-input"
+									placeholder="Email"
+									id="doctor-email"
+								/>
+							</div>
+						</div>
+						<div class="contact">
+							<div class="contact-text">
+								<label>Contact Number</label>
+							</div>
+							<div class="contact-input">
+								<input
+									type="text"
+									class="register-input"
+									placeholder="+91"
+									id="doctor-contact"
+								/>
+							</div>
+						</div>
+						<div class="reason">
+							<div class="reason-text">Reason</div>
+							<div class="reason-input">
+								<input type="text" id="doctor-reason" />
+							</div>
+						</div>
+						<div class="submit-button center pad-top">
+							<input type="submit" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement(
+					{ pageLanguage: "en" },
+					"google_translate_element",
+				);
+			}
+		</script>
+		<script
+			type="text/javascript"
+			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+		></script>
+		<script src="./landing.js"></script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+//signup email
+
+Greetings!
+Kudos to you for taking the initiative and reaching out to us to join the march to help everyone who has been suffering in these severe times. 
+Your OTP is: xxxxxx
+We are grateful for your support and wish for the healthy living of everyone around.
+Regards, 
+Team weLead. 
+
+//report mail
+Greetings!
+Kudos to you for reporting the irrelevant content/ unverified content posted by someone on our platform. We are in favour and trust all the volunteers out there like you. The reported lead will be reviewed and taken down immediately.
+Your OTP is : xxxxxx
+We are grateful for your support and wish for the healthy living of everyone around.
+Regards, 
+Team weLead. 
+
+//reject
+Greeting!
+We are glad to see your spirit to help others but unfortunately the organisation has rejected your request to join them. We hope this doesn’t hamper your enthusiasm and try helping the affected through other means. 
+Regards, 
+Team weLead. 
+
+//accept
+Greetings! 
+Kudos to your zeal and enthusiasm to help the needy in these severe times. So we are glad to inform you that your request to supply help from the organisation on weLead has been accepted. We hope you keep up the same spirit and are loyal to your job. 
+We are grateful for your support and wish for the healthy living of everyone around.
+Regards, 
+Team weLead. 
