@@ -20,11 +20,11 @@ router.post('/signup', async (req,res)=>{
     try {
         await organiser.save()
         const output =`<h2>Kudos to you for taking the initiative and reaching out to us to join the march to help everyone who has been suffering in these severe times.</h2> 
-<br><h3>Your OTP is: ${password}</h3><br>
-<h2>We are grateful for your support and wish for the healthy living of everyone around.</h2>
-<br>
-<h3>Regards,<br> 
-Team weLead.</h3>`
+      <br><h3>Your OTP is: ${password}</h3><br>
+      <h2>We are grateful for your support and wish for the healthy living of everyone around.</h2>
+      <br>
+      <h3>Regards,<br> 
+      Team weLead.</h3>`
 mail(organiser.email,'Sign Up and Password',output)
         const token = await organiser.generateAuthToken()
         res.status(201).send(organiser)
@@ -39,7 +39,7 @@ mail(organiser.email,'Sign Up and Password',output)
        const token = await organiser.generateAuthToken()
        console.log(organiser)
        
-       res.send({organiser,token})
+       res.status(200).send({organiser,token})
       
    } catch (e) {
        res.status(400).send()

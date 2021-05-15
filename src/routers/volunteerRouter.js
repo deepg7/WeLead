@@ -47,7 +47,7 @@ router.post('/loginVol',async(req,res)=>{
     try {
         const volunteer = await Volunteer.findByCredentials(req.body.email,req.body.password)
         const token = await volunteer.generateAuthToken()
-        res.send(volunteer)
+        res.status(200).send(volunteer)
        
     } catch (e) {
         res.status(400).send('oops')

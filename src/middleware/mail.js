@@ -25,10 +25,7 @@ let mailOptions = {
 transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
         return console.log(error);
-    }
-  
-
-   
+    }  
 });
 }
 const output =`<h2>Kudos to you for taking the initiative and reaching out to us to join the march to help everyone who has been suffering in these severe times.</h2> 

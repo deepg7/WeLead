@@ -34,8 +34,7 @@ router.post('/loginDoc',async(req,res)=>{
         const doctor = await Doctor.findByCredentials(req.body.email,req.body.password)
         const token = await doctor.generateAuthToken()
         console.log(doctor)
-        res.send({doctor,token})
-        console.log(doctor,token)
+        res.status(200).send({doctor,token})
     } catch (e) {
         res.status(400).send()
     }

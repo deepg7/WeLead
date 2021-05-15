@@ -82,7 +82,7 @@ const oxygen = () => {
 	document.getElementById("food-table").classList.add("hide");
 	document.getElementById("doctor").classList.add("hide");
 	let i = 0;
-	fetch(`https://277ce0072a0c.ngrok.io/getOxygenP?pincode=411040`)
+	fetch(`https://we-lead.herokuapp.com/getOxygenP?pincode=411040`)
 		.then((res) => res.json())
 		.then((data) =>
 			data.oxygens.forEach((oxygen) => {
@@ -118,7 +118,7 @@ const medicines = () => {
 	document.getElementById("food-table").classList.add("hide");
 	document.getElementById("doctor").classList.add("hide");
 	let i = 0;
-	fetch(`https://cd0ef9542865.ngrok.io/getVaccinesP?pincode=411040`)
+	fetch(`https://we-lead.herokuapp.com/getVaccinesP?pincode=411040`)
 		.then((res) => res.json())
 		.then((data) =>
 			data.vaccines.forEach((vaccine) => {
@@ -155,7 +155,7 @@ const food = () => {
 	const pincode = document.getElementById("pincode").value;
 	if (city) {
 		let i = 0;
-		fetch(`https://277ce0072a0c.ngrok.io/getFoodC?city=${city}`)
+		fetch(`https://we-lead.herokuapp.com/getFoodC?city=${city}`)
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data)
@@ -176,7 +176,7 @@ const food = () => {
 			});
 	} else if (pincode) {
 		let i = 0;
-		fetch(`https://cd0ef9542865.ngrok.io/getFoodP?pincode=${pincode}`)
+		fetch(`https://we-lead.herokuapp.com/getFoodP?pincode=${pincode}`)
 			.then((res) => res.json())
 			.then((data) => {
 				data.foods.forEach((food) => {
